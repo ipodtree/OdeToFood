@@ -1,0 +1,38 @@
+﻿@model  OdeToFood.Models.AboutModel
+@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+    <h3>@ViewBag.Location</h3>
+    <h4>@Model.Name</h4>
+    <h5>@Model.Location</h5>
+</hgroup>
+
+<article>
+    <p>
+        Use this area to provide additional information.
+    </p>
+
+    <p>
+        Use this area to provide additional information.
+    </p>
+
+    <p>
+        Use this area to provide additional information.
+    </p>
+</article>
+
+<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

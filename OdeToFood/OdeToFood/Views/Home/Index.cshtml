@@ -1,0 +1,37 @@
+﻿@model IPagedList<RestaurantListNewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<form method="get" id="formSearch" action="@Url.Action("Index")"
+      data-otf-ajax="ture" data-otf-target="#restaurantList">
+
+    <input type="search" name="searchTerm" data-otf-autocomplete="@Url.Action("Autocomplete")"/>
+    <input type="submit" value="Search By Name"/>
+</form>
+
+<div>
+    @OdeToFood.Views.Home.Resources.Greeting
+</div>
+
+
+
+
+@{
+    var amount = 10.0m;
+    var someDate = new DateTime(2005, 4, 23);
+}
+
+<div>
+    @amount.ToString("c")
+</div>
+
+<div>
+    @someDate.ToShortDateString()
+</div>
+
+
+
+@Html.Partial("_Restaurants",Model)
